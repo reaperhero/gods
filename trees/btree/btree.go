@@ -1,7 +1,3 @@
-// Copyright (c) 2015, Emir Pasic. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 // Package btree implements a B tree.
 //
 // According to Knuth's definition, a B-tree of order m is a tree which satisfies the following properties:
