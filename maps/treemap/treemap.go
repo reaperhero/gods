@@ -20,6 +20,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in a red-black tree
+// TreeMap 是有序的集合
 type Map struct {
 	tree *rbt.Tree
 }
@@ -74,6 +75,7 @@ func (m *Map) Keys() []interface{} {
 }
 
 // Values returns all values in-order based on the key.
+// ordered by key
 func (m *Map) Values() []interface{} {
 	return m.tree.Values()
 }

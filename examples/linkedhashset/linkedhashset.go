@@ -2,7 +2,8 @@ package main
 
 import "github.com/reaperhero/gods/sets/linkedhashset"
 
-// LinkedHashSetExample to demonstrate basic usage of LinkedHashSet
+// set by item
+// 根据插入顺序排序
 func main() {
 	set := linkedhashset.New() // empty
 	set.Add(5)                 // 5

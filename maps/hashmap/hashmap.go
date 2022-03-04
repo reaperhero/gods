@@ -17,6 +17,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in go's native map
+// sort by key, other simple with go map
 type Map struct {
 	m map[interface{}]interface{}
 }

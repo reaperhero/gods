@@ -2,7 +2,7 @@ package main
 
 import lls "github.com/reaperhero/gods/stacks/linkedliststack"
 
-// LinkedListStackExample to demonstrate basic usage of LinkedListStack
+// stack by link list
 func main() {
 	stack := lls.New()  // empty
 	stack.Push(1)       // 1

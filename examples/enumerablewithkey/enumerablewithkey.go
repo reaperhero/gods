@@ -13,7 +13,8 @@ func printMap(txt string, m *treemap.Map) {
 	fmt.Println("}")
 }
 
-// EunumerableWithKeyExample to demonstrate basic usage of EunumerableWithKey
+// treemap
+// key 不能重复
 func main() {
 	m := treemap.NewWithStringComparator()
 	m.Put("g", 7)
@@ -23,8 +24,6 @@ func main() {
 	m.Put("c", 3)
 	m.Put("b", 2)
 	m.Put("a", 1)
-	printMap("Initial", m) // { a:1 b:2 c:3 d:4 e:5 f:6 g:7 }
-
 	even := m.Select(func(key interface{}, value interface{}) bool {
 		return value.(int)%2 == 0
 	})

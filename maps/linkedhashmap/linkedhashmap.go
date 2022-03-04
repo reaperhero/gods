@@ -19,6 +19,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in a regular hash table, and uses doubly-linked list to store key ordering.
+// sort with insert order
 type Map struct {
 	table    map[interface{}]interface{}
 	ordering *doublylinkedlist.List

@@ -25,8 +25,8 @@ func main() {
 	heap.Size()                               // 0
 
 	// Max-heap
-	inverseIntComparator := func(a, b interface{}) int {
-		return -utils.IntComparator(a, b)
+	inverseIntComparator := func(a, b interface{}) int { // 自定义结构体实现比较方法就可以实现二叉队
+		return -utils.IntComparator(a, b) // 旧的排序基础上取反
 	}
 	heap = binaryheap.NewWith(inverseIntComparator) // empty (min-heap)
 	heap.Push(2)                                    // 2

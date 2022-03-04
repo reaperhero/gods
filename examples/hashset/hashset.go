@@ -2,7 +2,7 @@ package main
 
 import "github.com/reaperhero/gods/sets/hashset"
 
-// HashSetExample to demonstrate basic usage of HashSet
+// HashSet item 唯一,但是不能保证元素有序
 func main() {
 	set := hashset.New()   // empty (keys are of type int)
 	set.Add(1)             // 1

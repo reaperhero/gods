@@ -2,7 +2,6 @@ package main
 
 import "github.com/reaperhero/gods/sets/treeset"
 
-// TreeSetExample to demonstrate basic usage of TreeSet
 func main() {
 	set := treeset.NewWithIntComparator() // empty
 	set.Add(1)                            // 1

@@ -70,7 +70,7 @@ func (tree *Tree) Put(key interface{}, value interface{}) {
 		for loop {
 			compare := tree.Comparator(key, node.Key)
 			switch {
-			case compare == 0:
+			case compare == 0: // key相等就更新值
 				node.Key = key
 				node.Value = value
 				return

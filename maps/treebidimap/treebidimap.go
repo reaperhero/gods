@@ -107,12 +107,12 @@ func (m *Map) Size() int {
 	return m.forwardMap.Size()
 }
 
-// Keys returns all keys (ordered).
+// Keys returns all keys (ordered by key).
 func (m *Map) Keys() []interface{} {
 	return m.forwardMap.Keys()
 }
 
-// Values returns all values (ordered).
+// Values returns all values (ordered by value).
 func (m *Map) Values() []interface{} {
 	return m.inverseMap.Keys()
 }

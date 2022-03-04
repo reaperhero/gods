@@ -16,6 +16,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in go's native map
+// no sort key
 type Set struct {
 	items map[interface{}]struct{}
 }

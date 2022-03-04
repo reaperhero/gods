@@ -5,7 +5,7 @@ import (
 	"github.com/reaperhero/gods/utils"
 )
 
-// SinglyLinkedListExample to demonstrate basic usage of SinglyLinkedList
+// 双向链表
 func main() {
 	list := sll.New()
 	list.Add("a")                         // ["a"]

@@ -18,6 +18,7 @@ func assertListImplementation() {
 }
 
 // List holds the elements, where each element points to the next element
+// two-way linked list
 type List struct {
 	first *element
 	last  *element

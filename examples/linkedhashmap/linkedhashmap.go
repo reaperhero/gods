@@ -2,7 +2,8 @@ package main
 
 import "github.com/reaperhero/gods/maps/linkedhashmap"
 
-// LinkedHashMapExample to demonstrate basic usage of LinkedHashMapExample
+// set by key
+// 根据插入顺序排序
 func main() {
 	m := linkedhashmap.New() // empty (keys are of type int)
 	m.Put(2, "b")            // 2->b

@@ -1,12 +1,16 @@
 package main
 
-import "github.com/reaperhero/gods/maps/hashmap"
+import (
+	"github.com/reaperhero/gods/maps/hashmap"
+)
 
 // HashMapExample to demonstrate basic usage of HashMap
 func main() {
 	m := hashmap.New() // empty
 	m.Put(1, "x")      // 1->x
 	m.Put(2, "b")      // 2->b, 1->x  (random order)
+	m.Put(1, "a")      // 2->b, 1->a (random order)
+	m.Put(3, "a")      // 2->b, 1->a (random order)
 	m.Put(1, "a")      // 2->b, 1->a (random order)
 	_, _ = m.Get(2)    // b, true
 	_, _ = m.Get(3)    // nil, false

@@ -18,6 +18,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in a red-black tree
+// TreeSet 是有序的集合
 type Set struct {
 	tree *rbt.Tree
 }
@@ -93,17 +94,16 @@ func (set *Set) Clear() {
 }
 
 // Values returns all items in the set.
+// ordered by item
 func (set *Set) Values() []interface{} {
 	return set.tree.Keys()
 }
 
 // String returns a string representation of container
 func (set *Set) String() string {
-	str := "TreeSet\n"
-	items := []string{}
+	var items []string
 	for _, v := range set.tree.Keys() {
 		items = append(items, fmt.Sprintf("%v", v))
 	}
-	str += strings.Join(items, ", ")
-	return str
+	return strings.Join(items, ", ")
 }

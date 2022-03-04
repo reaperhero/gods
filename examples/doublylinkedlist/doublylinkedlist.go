@@ -11,6 +11,7 @@ func main() {
 	list.Add("a")                         // ["a"]
 	list.Append("b")                      // ["a","b"] (same as Add())
 	list.Prepend("c")                     // ["c","a","b"]
+	list.IndexOf("c")                     // 0
 	list.Sort(utils.StringComparator)     // ["a","b","c"]
 	_, _ = list.Get(0)                    // "a",true
 	_, _ = list.Get(100)                  // nil,false

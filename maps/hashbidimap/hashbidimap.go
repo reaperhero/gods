@@ -22,6 +22,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in two hashmaps.
+// key value 任一一个都不能重复
 type Map struct {
 	forwardMap hashmap.Map
 	inverseMap hashmap.Map

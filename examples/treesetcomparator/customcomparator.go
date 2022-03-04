@@ -13,8 +13,8 @@ func printSet(txt string, set *treeset.Set) {
 	fmt.Println("]")
 }
 
-// EnumerableWithIndexExample to demonstrate basic usage of EnumerableWithIndex
-func main() {
+// int tree set
+func main1() {
 	set := treeset.NewWithIntComparator()
 	set.Add(2, 3, 4, 2, 5, 6, 7, 8)
 	printSet("Initial", set) // [ 2 3 4 5 6 7 8 ]
@@ -52,4 +52,45 @@ func main() {
 		return value.(int) * value.(int)
 	})
 	printSet("Chaining", evenNumbersSquared) // [ 4 16 36 64 ]
+}
+
+// custom tree set
+// item 不能重复
+func main() {
+
+	// User model (id and name)
+	type User struct {
+		id   int
+		name string
+	}
+	// Comparator function (sort by IDs)
+	byID := func(a, b interface{}) int {
+		// Type assertion, program will panic if this is not respected
+		c1 := a.(User)
+		c2 := b.(User)
+		switch {
+		case c1.id > c2.id:
+			return 1
+		case c1.id < c2.id:
+			return -1
+		default:
+			return 0
+		}
+	}
+
+	set := treeset.NewWith(byID) // 自定义创建集合
+
+	set.Add(User{2, "Second"})
+	set.Add(User{3, "Third"})
+	set.Add(User{1, "First"})
+	set.Add(User{4, "Fourth"})
+	set.Add(User{4, "Fourth2"})
+	set.Find(func(index int, value interface{}) bool {
+		if value.(User).id == 4 {
+			fmt.Println(value)
+			return true
+		}
+		return false
+	})
+	fmt.Println(set) // {1 First}, {2 Second}, {3 Third}, {4 Fourth2}
 }

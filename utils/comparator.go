@@ -2,13 +2,9 @@ package utils
 
 import "time"
 
-// Comparator will make type assertion (see IntComparator for example),
-// which will panic if a or b are not of the asserted type.
-//
-// Should return a number:
-//    negative , if a < b
-//    zero     , if a == b
-//    positive , if a > b
+// if a < b;return -1
+// if a = b;return 0
+// if a > b;return 1
 type Comparator func(a, b interface{}) int
 
 // StringComparator provides a fast comparison on strings
