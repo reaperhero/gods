@@ -21,6 +21,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in go's native map
+// sort by insert order
 type Set struct {
 	table    map[interface{}]struct{}
 	ordering *doublylinkedlist.List

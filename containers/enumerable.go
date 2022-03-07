@@ -9,7 +9,6 @@ type EnumerableWithIndex interface {
 	// container containing the values returned by the given function.
 	// TODO would appreciate help on how to enforce this in containers (don't want to type assert when chaining)
 	// Map(func(index int, value interface{}) interface{}) Container
-
 	// Select returns a new container containing all elements for which the given function returns a true value.
 	// TODO need help on how to enforce this in containers (don't want to type assert when chaining)
 	// Select(func(index int, value interface{}) bool) Container
