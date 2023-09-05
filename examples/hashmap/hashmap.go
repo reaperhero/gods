@@ -6,6 +6,7 @@ import (
 
 // HashMapExample to demonstrate basic usage of HashMap
 func main() {
+	// key value 任一都不能重复
 	m := hashmap.New() // empty
 	m.Put(1, "x")      // 1->x
 	m.Put(2, "b")      // 2->b, 1->x  (random order)

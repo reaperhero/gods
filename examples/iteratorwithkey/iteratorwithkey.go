@@ -12,7 +12,7 @@ func main() {
 	m := treemap.NewWithIntComparator()
 	m.Put(1, "a")
 	m.Put(2, "b")
-	m.Put(3, "a")
+	m.Put(3, "b")
 	it := m.Iterator()
 
 	fmt.Print("\nForward iteration\n")

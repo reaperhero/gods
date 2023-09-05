@@ -27,7 +27,7 @@ func main() {
 	//      └── 2
 	//          └── 1
 
-	_ = tree.Values() // []interface {}{"a", "b", "c", "d", "e", "f"} (in order)
+	_ = tree.Values() // []interface {}{"a", "b", "c", "d", "e", "f"} (in order by key)
 	_ = tree.Keys()   // []interface {}{1, 2, 3, 4, 5, 6} (in order)
 
 	tree.Remove(2) // 1->a, 3->c, 4->d, 5->e, 6->f (in order)
